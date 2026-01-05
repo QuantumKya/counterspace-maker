@@ -25,6 +25,13 @@ document.addEventListener('keydown', e => {
     
     guesses[typeIndex] = e.key;
     draw();
+
+    if (winCheck()) {
+        setTimeout(() => {
+            canvas.style.borderColor = '#00dd00';
+            alert('Congratulations! You solved the puzzle!');
+        }, 500);
+    }
 });
 
 
