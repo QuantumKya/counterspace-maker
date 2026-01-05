@@ -1,0 +1,128 @@
+html {
+    overflow-x: hidden;
+    font-family: 'Roboto';
+}
+
+body {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, #e1e1e1 1px, transparent 1px),
+        linear-gradient(to bottom, #e1e1e1 1px, transparent 1px);
+}
+
+button {
+    background-color: #efefef;
+    border: 2px dashed black;
+    border-radius: 0.33rem;
+}
+
+#main {
+    position: absolute;
+    top: 5rem;
+    left: 0px;
+    width: 100%;
+}
+
+#htitle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#ptitle {
+    position: absolute;
+    top: 23px;
+    left: calc(50vw + 10em);
+    width: 100%;
+    text-align: left;
+}   
+
+#big-row {
+    display: flex;
+    flex-direction: row;
+}
+
+canvas {
+    width: 500px;
+    height: 500px;
+    border: 10px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#info {
+    justify-self: flex-end;
+    margin-left: 2rem;
+}
+
+#controlpanel {
+    justify-self: flex-start;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    max-width: 22rem;
+}
+
+#colorholder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
+
+    padding: 1rem;
+    border: 2px dashed black;
+    border-radius: 2rem;
+}
+
+#colorholder > div, #controlpanel img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    width: 6rem;
+    height: 4rem;
+}
+
+#ansimg, #abcimg {
+    object-fit: contain;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+div.selected {
+    border: 2px solid black;
+    margin: -2px;
+}
+
+img.selected {
+    border: 2px solid black;
+    margin: -2px;
+}
+
+#canvas-holder {
+    width: fit-content;
+    justify-self: center;
+}
+
+#info {
+    position: relative;
+    left: 20px;
+    width: calc(90vw - 885px);
+    text-wrap: wrap;
+}
+
+#saveload {
+    position: relative;
+    text-wrap: wrap;
+    width: 500px;
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    height: 20px;
+}
+
+#b64output {
+    justify-self: flex-start;
+}
+
+#b64input {
+    justify-self: flex-end;
+}

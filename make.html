@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>CounterSpace Maker</title>
+
+
+    <script src="index.js" defer></script>
+    <script src="make.js" defer></script>
+</head>
+<body>
+
+    <span>
+        <h1 id="htitle">CounterSpace Maker</h1>
+        <p id="ptitle">by QuantumKya</p>
+    </span>
+
+    <div id="main">
+
+        <div id="big-row">
+        
+            <div id="controlpanel">
+                <p style="font-size: x-large;">Colors</p>
+                <div id="colorholder"></div>
+
+                <p style="font-size: x-large;">Write Text</p>
+                <img src="abc_placeholder.png" id="abcimg">
+                <img src="answer_img.png" id="ansimg">
+                <p>When adding characters, hover over grid space and type the character. For entry points, just click the desired square.</p>
+            </div>
+
+            <div id="canvas-holder">
+                <canvas id="kansas" style="image-rendering: pixelated; position: relative;"></canvas>
+
+                <div id="saveload">
+                    <button id="b64output" onclick="exportPuzzle()">Copy Puzzle</button>
+                    <input id="b64input" type="text" placeholder="Base64 Puzzle Data">
+                    <button onclick="importPuzzle(document.getElementById('b64input').value)">Load Puzzle</button>
+                </div>
+            </div>
+
+            <div id="info">
+                <h3>Welcome to CounterSpace Maker !</h3>
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>

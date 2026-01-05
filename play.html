@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>CounterSpace Player</title>
+
+
+    <script src="index.js" defer></script>
+    <script src="play.js" defer></script>
+</head>
+<body>
+
+    <span>
+        <h1 id="htitle">CounterSpace Player</h1>
+        <p id="ptitle">by QuantumKya</p>
+    </span>
+
+    <div id="main">
+
+        <div id="big-row">
+        
+            <div id="controlpanel">
+                <input type="text" id="b64input" placeholder="Base64 Puzzle Data">
+                <button onclick="importPuzzle(document.getElementById('b64input').value);" style="width: fit-content;">Load Puzzle</button>
+            </div>
+
+            <div id="canvas-holder">
+                <canvas id="kansas" style="image-rendering: pixelated; position: relative;"></canvas>
+            </div>
+
+            <div id="info">
+                <h3>Welcome to CounterSpace Puzzle Player !</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
