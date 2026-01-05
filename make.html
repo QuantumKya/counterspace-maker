@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>CounterSpace Maker</title>
+    <title>CounterSpace Maker — Make</title>
 
 
     <script src="index.js" defer></script>
@@ -28,13 +28,24 @@
         <div id="big-row">
         
             <div id="controlpanel">
+                <div class="slidercontainer">
+                    <div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+                        <p style="justify-content: flex-start;">2</p>
+                        <p style="margin: 0 auto;">Grid Size</p>
+                        <p style="justify-content: flex-end;">10</p>
+                    </div>
+                    <input type="range" min="2" max="10" value="5" class="slider" id="sizeslider">
+                </div>
+
                 <p style="font-size: x-large;">Colors</p>
                 <div id="colorholder"></div>
 
                 <p style="font-size: x-large;">Write Text</p>
-                <img src="abc_placeholder.png" id="abcimg">
-                <img src="answer_img.png" id="ansimg">
-                <p>When adding characters, hover over grid space and type the character. For entry points, just click the desired square.</p>
+                <div id="textholder">
+                    <img src="abc_placeholder.png" id="abcimg">
+                    <img src="answer_img.png" id="ansimg">
+                    <p>When adding characters, hover over grid space and type the character. For entry points, just click the desired square.</p>
+                </div>
             </div>
 
             <div id="canvas-holder">
@@ -49,6 +60,17 @@
 
             <div id="info">
                 <h3>Welcome to CounterSpace Maker !</h3>
+
+                <p>Make CounterSpace puzzles and share them!</p>
+                <p>Pick colors and place them down by clicking and dragging.</p>
+                <p>Input fields are only selected, which means that you select which tiles will be filled in by players, but you still see their solutions here on the maker page.</p>
+
+                <br>
+
+                <p>Once you've made some puzzles, share them by copying the puzzle.</p>
+                <p><a href="play.html">Click here to go to the playing page.</a></p>
+
+                <p style="margin-top: 12rem;"><a href="https://docs.google.com/spreadsheets/d/142pxFEuUgCBcBdfzXVNY61nHkRdHHnuLHIfMdBIyJtY/edit?gid=1627089961#gid=1627089961" style="font-size: 125%;">Original CounterSpace by SilverRush (@silver_rush)</a></p>
             </div>
 
         </div>

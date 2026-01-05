@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>CounterSpace Maker — Home</title>
+
+    <style>
+
+        #linkbuttons {
+            position: absolute;
+            top: 42.5%;
+            left: 50%;
+            translate: -50% -50%;
+
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        #linkbuttons button {
+            font-size: x-large;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        #linkbuttons button:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="htitle" style="top: 30%; translate: 0 -150%; font-size: 500%;">CounterSpace Maker</p>
+    <p id="ptitle" style="top: 30%; font-size: x-large;">by QuantumKya</p>
+
+    <div id="linkbuttons">
+        <a href="/make.html" style="display: none;"></a>
+        <button onclick="document.getElementById('linkbuttons').querySelectorAll('a')[0].click()" style="background-color: #fef;">> Make Puzzles!</button>
+        <a href="/play.html" style="display: none;"></a>
+        <button onclick="document.getElementById('linkbuttons').querySelectorAll('a')[1].click()" style="background-color: #eff;">> Play Puzzles!</button>
+    </div>
+
+</body>
+</html>

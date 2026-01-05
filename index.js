@@ -24,6 +24,9 @@ function init(w = WIDTH, h = HEIGHT) {
     for (let x = 0; x < w; x++) grid[x] = new Array(h).fill('wt ');
 }
 
+const textlevelinput = document.getElementById('b64input');
+textlevelinput.value = '';
+
 
 //-------------------------- Color Catalogue --------------------------
 

@@ -1,3 +1,13 @@
+// -------------------------- Initial Logic --------------------------
+const slider = document.getElementById('sizeslider');
+slider.value = 5;
+init(5, 5);
+slider.oninput = e => {
+    const val = parseInt(e.target.value);
+    init(val, val);
+    draw();
+}
+
 //-------------------------- Tool Selection Logic --------------------------
 
 let currentColor = 'wt';
