@@ -177,14 +177,16 @@ const exportPuzzle = () => {
         data = data.slice(0, -1);
     }
     
-    navigator.clipboard.writeText(data);
+    navigator.clipboard.writeText(btoa(data));
     alert('Puzzle copied to clipboard!');
 };
 
-const importPuzzle = (dataStr) => {
+const importPuzzle = (data) => {
+    const dataStr = atob(data);
+
     const sizeStr = (dataStr.match(/\d+,\d+/g) || [])[0];
     if (!sizeStr) {
-        alert("Invalid puzzle data, sorry.");
+        //alert("Invalid puzzle data, sorry.");
         return;
     }
 
@@ -193,7 +195,7 @@ const importPuzzle = (dataStr) => {
     dataStr = dataStr.slice(sizeStr.length);
     const dataArr = dataStr.slice(0, 3*w*h).match(/.{1,3}/g) || [];
     if (dataArr.length === 0) {
-        alert("Invalid puzzle data, sorry.");
+        //alert("Invalid puzzle data, sorry.");
         return;
     }
     dataStr = dataStr.slice(3*w*h);
